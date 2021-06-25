@@ -3,7 +3,7 @@ using namespace std;
 const int MAX = 1e5;
 
 /*
-Q.0/1 KnapSack Problem
+Q.Unbounded KnapSack Problem
 Desc- This probelm states that you have two arrays 
 (i).A value array 'val[]' and 
 (ii).a weight array 'wt[]' and a limit variable generally named Weight 'W'
@@ -12,7 +12,7 @@ We have to maximize the value when we pick items from weight array corresponding
 
 /*
 DSA-NOTES
-1.0-1 KnapSack DP Problem-Tabulation BottomUp Approach
+1.Unbounded KnapSack DP Problem-Tabulation BottomUp Approach
 2.In this we consider approcach that either we pick the element or we do not pick the element and then consider maximum of its value.
 3.DP array will be filled like this dp[n+1][W+1] :. n=no. of elements, W=totalWeight;
 4.dp[i][j]=Maximum value that we can collect with first i items and knapsack capacity j.
@@ -44,7 +44,7 @@ int knapsack(int W, int wt[], int val[], int n)
             }
             else
             {
-                dp[i][j] = max(dp[i - 1][j], val[i - 1] + dp[i - 1][j - wt[i - 1]]);
+                dp[i][j] = max(dp[i - 1][j], val[i - 1] + dp[i][j - wt[i - 1]]);
             }
         }
     }
