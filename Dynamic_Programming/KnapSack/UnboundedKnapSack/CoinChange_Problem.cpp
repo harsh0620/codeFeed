@@ -3,7 +3,7 @@ using namespace std;
 const int MAX = 1e5;
 
 /*
-Q.0/1 KnapSack Problem- Coin Change Problem
+Q.Unbounded KnapSack Problem- Coin Change Problem
 
 Problem Statement :---We have an array with some coins but they have infinite supply and a sum
 and we have to find total ways in which we can get the sum.
