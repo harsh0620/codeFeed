@@ -63,5 +63,5 @@ int main()
 
 /*
 Time Complexity:-
-1.O(2^n);
+1.O(mn);
 */
