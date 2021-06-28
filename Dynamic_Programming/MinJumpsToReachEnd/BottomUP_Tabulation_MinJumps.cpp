@@ -58,6 +58,6 @@ int main()
 }
 
 /*
-Time Complexity: O(2^n). 
-As there are redundant subproblems.
+Time Complexity: O(n^2). 
+As there are two loops.
 */
