@@ -47,5 +47,5 @@ int main()
     return 0;
 }
 //                  Best	Average	Worst
-// Selection Sort   Ω(n)	θ(n^2)	O(n^2)
+// Insertion Sort   Ω(n)	θ(n^2)	O(n^2)
 // Auxiliary Space: O(1)
