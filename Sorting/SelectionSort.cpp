@@ -48,3 +48,4 @@ int main()
 }
 //                  Best	Average	Worst
 // Selection Sort   Ω(n^2)	θ(n^2)	O(n^2)
+// Auxiliary Space: O(1)
