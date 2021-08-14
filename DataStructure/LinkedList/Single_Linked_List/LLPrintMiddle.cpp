@@ -19,42 +19,40 @@ node *insertBegin(node *head, int x)
     temp->next = head;
     return temp;
 }
-node *insertAtEnd(node *head, int x)
+void printMiddleNaive(node *head)
 {
-    node *temp = new node(x);
     if (head == NULL)
     {
-        return temp;
+        return;
     }
-    node *curr = head;
-    while (curr->next != NULL)
+    int count = 0;
+    node *curr;
+    for (curr = head; curr != NULL; curr = curr->next)
     {
-        curr = curr->next;
+        count++;
     }
-    curr->next = temp;
-    return head;
-}
-node *insertAtPos(node *head, int pos, int data)
-{
-    node *temp = new node(data);
-    if (pos == 1)
-    {
-        temp->next = head;
-        return temp;
-    }
-    node *curr = head;
-    for (int i = 0; i < pos - 2 && curr != NULL; i++)
-    {
-        curr = curr->next;
-    }
-    if (curr == NULL)
-    {
-        return head;
-    }
-    temp->next = curr->next;
-    curr->next = temp;
+    curr = head;
 
-    return head;
+    for (int i = 0; i < count / 2; i++)
+    {
+        curr = curr->next;
+    }
+    cout << curr->data << endl;
+}
+void printmiddleEfficient(node *head)
+{
+    if (head == NULL)
+    {
+        return;
+    }
+    node *slow = head, *fast = head;
+
+    while (fast != NULL && fast->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    cout << slow->data << endl;
 }
 void displayLL(node *head)
 {
@@ -73,13 +71,13 @@ void displayLL(node *head)
 int main()
 {
     node *head = NULL;
+    head = insertBegin(head, 40);
     head = insertBegin(head, 30);
     head = insertBegin(head, 20);
     head = insertBegin(head, 10);
-    head = insertAtEnd(head, 50);
-    head = insertAtPos(head, 3, 100);
-    head = insertAtPos(head, 6, 100);
-    head = insertAtPos(head, 1, 100);
+
+    printmiddleEfficient(head);
+    printMiddleNaive(head);
     displayLL(head);
 
     return 0;
