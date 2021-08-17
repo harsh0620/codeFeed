@@ -1,6 +1,3 @@
-#codeFeed
-#Revise the code just like we watch insta feed
+# CODEFEED
 
-In Progress.....
-
-#Developed by Harsh Chandravanshi
+# Collection of DSA
