@@ -7,7 +7,7 @@ problem into smaller problems.
 
 In this we pick pivot element,the element whose left side elements
 are smaller and right side elements are greater and by picking the element we 
-also positioned it to its real pos. accroding to sorting.
+also positioned it to its real pos. according to sorting.
 
 */
 
